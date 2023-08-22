@@ -18,17 +18,14 @@ function isValid(s: string): boolean {
         if (!openDict.has(opened) || !closeDict.has(closed)) {
             return false;
         }
-        if (opened === "(" && closed === ")") {
-            return true;
-        } else if (opened === "[" && closed === "]") {
-            return true;
-        } else if (opened === "{" && closed === "}") {
-            return true;
-        }
-        return false;
+        return (
+            (opened === "(" && closed === ")") ||
+            (opened === "[" && closed === "]") ||
+            (opened === "{" && closed === "}")
+        );
 
     };
-    const stack = [];
+    const stack: string[] = [];
     if (closeDict.has(s.charAt(0))) {
         return false;
     }
