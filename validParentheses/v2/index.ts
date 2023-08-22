@@ -47,15 +47,18 @@ function isValid(s: string): boolean {
         if (isPair(curSym, nextSym)) {
             i++;
         } else {
-            stack.push(curSym);
-            if (isPair(stack[stack.length - 2], stack[stack.length - 1])) {
-                stack.pop();
-                stack.pop();
+            if (closeDict.has(curSym)) {
+                const pop = stack.pop();
+                if (!isPair(pop, curSym)) {
+                    return false;
+                } else {
+                    continue;
+                }
             }
+            stack.push(curSym);
         }
     }
     return stack.length === 0;
-
 }
 
 export default isValid;
