@@ -1,6 +1,5 @@
-import twoSum from "./twoSum/v1";
+import isValid from "./validParentheses/v1";
 
 (() => {
-    console.log(twoSum([-3, 4, 3, 90], 0));
-
+    console.log(isValid("([{}]])"));
 })();
