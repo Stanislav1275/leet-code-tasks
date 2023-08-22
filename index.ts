@@ -1,5 +1,13 @@
-import isValid from "./validParentheses/v2";
+import mergeTwoLists, {ListNode} from "./mergeTwoSortedLists/v1";
 
 (() => {
-    console.log(isValid("([{}])"));
+    console.log(
+        mergeTwoLists(
+            new ListNode(
+                1, new ListNode(2, new ListNode(4)),
+            ),
+            new ListNode(1, new ListNode(3, new ListNode(4)),
+            ),
+        ),
+    );
 })();
