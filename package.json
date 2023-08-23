@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "",
-    "start": "nodemon dist/index.js"
+    "start": "nodemon dist/index.js",
+    "startTs": "tsc && node index.js"
   },
   "keywords": [],
   "author": "",
