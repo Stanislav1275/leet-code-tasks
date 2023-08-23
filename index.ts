@@ -1,4 +1,4 @@
-import mergeTwoLists, {ListNode} from "./mergeTwoSortedLists/v1";
+import mergeTwoLists, {ListNode} from "./mergeTwoSortedLists/v2";
 
 (() => {
     console.log(
