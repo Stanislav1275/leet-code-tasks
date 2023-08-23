@@ -1,7 +1,7 @@
-import maxProfit from "./bstTime2By&SelStok/v2";
+import isPolyndrom from "./isPolyndrom/v3";
 
 (() => {
     console.log(
-        maxProfit([1, 2]),
+        isPolyndrom("0P"),
     );
 })();
