@@ -1,4 +1,3 @@
-// @wrong answer!!!
 function maxProfit(prices: number[]): number {
     let prevIndex = prices.length - 1; // запоминаем индекс элемент, где была замечена большая разница
     let dif = 0; // разница
