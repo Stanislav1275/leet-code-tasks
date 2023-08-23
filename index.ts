@@ -1,15 +1,7 @@
-import mergeTwoLists, {ListNode} from "./mergeTwoSortedLists/v2";
+import maxProfit from "./bstTime2By&SelStok/v1";
 
 (() => {
     console.log(
-        JSON.stringify(
-            mergeTwoLists(
-                new ListNode(
-                    1, new ListNode(2, new ListNode(4)),
-                ),
-                new ListNode(1, new ListNode(3, new ListNode(4)),
-                ),
-            ),
-        ),
+        maxProfit([0, 3, 8, 6, 8, 6, 6, 8, 2, 0, 2, 7]),
     );
 })();
