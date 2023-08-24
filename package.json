@@ -4,10 +4,9 @@
   "description": "",
   "main": "tasks/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "",
-    "start": "nodemon dist/index.js",
-    "startTs": "tsc && node index.js"
+    "compile": "tsc",
+    "start/tasks/index": "nodemon dist/index.js",
+    "start/dateStructures/index": "nodemon dist/data-structurs/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +14,7 @@
   "dependencies": {
     "ts-node": "^10.9.1"
   },
-  "devDependencies": {
-    "tslint": "5.12.1",
-    "typescript": "3.3.3"
+  "peerDependencies": {
+    "typescript": "5.0.1"
   }
 }
