@@ -2,8 +2,8 @@ import LinkedNode from "./modules/LinkedNode";
 
 class LinkedList<ValueType> {
     constructor() {
-        this._header = null;
-        this._tail = null;
+        this._header = null;// голова
+        this._tail = null; // указатель на конец
     }
 
     private _tail: LinkedNode<ValueType>
@@ -35,7 +35,8 @@ class LinkedList<ValueType> {
      * * присоединить к голове
      * */
     public prepend(value: ValueType) {
-        const node = new LinkedNode<ValueType>(value, this._header);
+        const node = new LinkedNode<ValueType>(value, this.header);
+
         this.header = node;
         if (!this.tail) {
             this.tail = node;
@@ -43,9 +44,22 @@ class LinkedList<ValueType> {
         return this;
     }
 
+
+    public append(value: ValueType) {
+        const node = new LinkedNode<ValueType>(value);
+        if (!this.header) {
+            this.tail = node;
+            this.header = node;
+            return this;
+        }
+        this._tail.next = node;
+        this.tail = node;
+        return this;
+    }
+
     public toArray(): Array<ValueType> {
         let headNode: LinkedNode<ValueType> = this.header;
-        const arr: Array<ValueType> = [];
+        let arr: Array<ValueType> = [];
         while (headNode) {
             arr.push(headNode.value);
             headNode = headNode.next;
@@ -54,7 +68,7 @@ class LinkedList<ValueType> {
     }
 
     private _addNode = (node: LinkedNode<ValueType>) => {
-        if (!this._header) {
+        if (!this.header) {
             this.header = node;
         } else {
             this._header.next = node;
