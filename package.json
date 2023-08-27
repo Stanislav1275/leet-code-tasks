@@ -5,7 +5,7 @@
   "main": "tasks/index.ts",
   "scripts": {
     "compile": "tsc",
-    "start/tasks/index": "nodemon dist/index.js",
+    "start/tasks/index": "nodemon dist/tasks/index.js",
     "start/dateStructures/index": "nodemon dist/data-structurs/index.js"
   },
   "keywords": [],
