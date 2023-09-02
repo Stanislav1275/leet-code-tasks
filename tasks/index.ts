@@ -1,7 +1,7 @@
-import isAnagram from "./validAnagram/v1";
+import search from "./binarySearch/v1";
 
 (() => {
 
-    console.log(isAnagram("rat", "car"))
+    console.log(search([2, 6], 6))
 
 })();
