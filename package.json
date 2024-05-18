@@ -12,8 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^20.12.12",
+    "@types/pngjs": "^6.0.5",
     "alphabits": "^0.3.0",
+    "fs": "^0.0.1-security",
     "js-md5": "^0.8.3",
+    "steggy": "^2.0.1",
     "ts-node": "^10.9.1",
     "typescript": "5.0.1"
   },
